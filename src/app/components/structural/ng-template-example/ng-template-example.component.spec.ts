@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgtemplateExampleComponent } from './ngtemplate-example.component';
+import { NgtemplateExampleComponent } from './ng-template-example.component';
 
 describe('NgtemplateExampleComponent', () => {
   let component: NgtemplateExampleComponent;

@@ -1,12 +1,9 @@
-<h4>Angular | Angular ngTemplateOutlet</h4>
-<p>Learn how to use ngTemplateOutlet in Angular</p>
-<hr>
+<header>
+    <h4>Angular | Angular ngTemplateOutlet</h4>
+    <p>Learn how to use ngTemplateOutlet in Angular</p>
+</header>
 
-<ng-container *ngTemplateOutlet="loadingTemplate">
-
-</ng-container>
-
-<ng-template #loadingTemplate
+<ng-template #loadingTemplate>
     <div>Loading...</div>
 </ng-template>
 
@@ -15,4 +12,10 @@
     <div>{{article?.title}}</div>
 </ng-template>
 
+<ng-container *ngTemplateOutlet="loadingTemplate"></ng-container>
+<ng-container
+  *ngTemplateOutlet="articleTemplate; context: { article: article }">
+</ng-container>
+
+<br /><br />
 <hr>

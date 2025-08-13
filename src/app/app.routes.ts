@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: 'view-child',
+        path: '',
         loadComponent: () => 
             import('./components/queries/viewchild-example/viewchild-example.component')
             .then(m => m.ViewchildComponent)

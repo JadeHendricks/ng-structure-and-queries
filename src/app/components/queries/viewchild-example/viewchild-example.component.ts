@@ -21,6 +21,10 @@ export class ViewchildComponent implements AfterViewInit {
     this.child?.incrementCount();
   }
 
+  public decrementCount(): void {
+    this.child?.decrementCount();
+  }
+
   ngAfterViewInit(): void {
     if (this.buttonRef?.nativeElement) {
       this.buttonRef.nativeElement.innerHTML = 'Increment Button (Updated)';

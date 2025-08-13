@@ -9,7 +9,7 @@ import { ChildExampleComponent } from '../child-example/child-example.component'
   styleUrl: './viewchildren-example.component.scss'
 })
 export class ViewchildrenExampleComponent {
-    // using viewChildren to get a list of all child components
+  // using viewChildren to get a list of all child components
   // this is useful when you have multiple instances of the same component and you want to access
   @ViewChildren(ChildExampleComponent) children?: QueryList<ChildExampleComponent>;
 

@@ -1,1 +1,21 @@
-<router-outlet />
+<nav>
+  <div class="container">
+    <div class="wrapper">
+      <h1>Playground</h1>
+      <ul>
+        <li><a routerLink="/">ViewChild</a></li>
+        <li><a routerLink="/view-children">ViewChildren</a></li>
+        <li><a routerLink="/ng-content">NgContent</a></li>
+        <li><a routerLink="/ng-container">NgContainer</a></li>
+        <li><a routerLink="/ng-template">NgTemplate</a></li>
+        <li><a routerLink="/ng-templateoutlet">NgTemplateOutlet</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="container">
+    <router-outlet />
+  </div>
+</section>

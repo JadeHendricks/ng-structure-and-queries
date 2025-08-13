@@ -1,0 +1,12 @@
+<h4>Angular | Angular ng-content</h4>
+<p>Learn how to use ng-content in Angular</p>
+<hr>
+
+<!--Useful when you want to write markup in your child component from your parent component-->
+<!-- You can use it with select to place content into seperate ng-contents within the child-->
+<app-structural-composition-child>
+    <div>ng-content: {{article?.title}}</div>
+    <h3 another-title>ng-content: {{article?.title}}</h3>
+</app-structural-composition-child>
+
+<hr>

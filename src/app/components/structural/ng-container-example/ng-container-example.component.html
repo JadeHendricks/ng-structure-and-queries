@@ -1,0 +1,12 @@
+<h4>Angular | Angular ng-container</h4>
+<p>Learn how to use ng-container in Angular</p>
+<hr>
+
+<!--ng-container allows us to create a Fragamnet <></> that doesn't show in the HTML, but is still possible to add directives to it-->
+<ng-container *ngIf="numbers.length">
+    <ng-container *ngFor="let number of numbers">
+        {{number}}
+    </ng-container>
+</ng-container>
+
+<hr>

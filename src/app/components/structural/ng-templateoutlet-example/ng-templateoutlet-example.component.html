@@ -1,0 +1,18 @@
+<h4>Angular | Angular ngTemplateOutlet</h4>
+<p>Learn how to use ngTemplateOutlet in Angular</p>
+<hr>
+
+<ng-container *ngTemplateOutlet="loadingTemplate">
+
+</ng-container>
+
+<ng-template #loadingTemplate
+    <div>Loading...</div>
+</ng-template>
+
+<!--using let-article="article" is how we pass properties to the template-->
+<ng-template #articleTemplate let-article="article">
+    <div>{{article?.title}}</div>
+</ng-template>
+
+<hr>

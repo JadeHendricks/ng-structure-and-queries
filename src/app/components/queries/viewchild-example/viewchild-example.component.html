@@ -1,10 +1,15 @@
 <header>
     <h4>Angular ElementRef | Angular ViewChild</h4>
-    <p>Learn how to access elements with ElementRef, ViewChild in Angular.</p>
+    <p>Learn how to access elements with <strong>ElementRef</strong>, <strong>ViewChild</strong> in Angular.</p>
 </header>
 
-<button (click)="incrementCount()" #button>Increment Count</button>
-<button (click)="decrementCount()">Decrement Count</button>
-<app-child-example></app-child-example>
+<section>
+    <h4>Buttons showing the power of ViewChild</h4>
+    <button (click)="incrementCount()" #button>Increment Count</button>
+    <button (click)="decrementCount()">Decrement Count</button>
+</section>
 
-<hr>
+<section>
+    <h4>Child Component to reflect button changes</h4>
+    <app-child-example></app-child-example>
+</section>

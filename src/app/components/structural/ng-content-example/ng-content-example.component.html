@@ -1,18 +1,22 @@
 <header>
     <h4>Angular | Angular ng-content</h4>
-    <p>Learn how to use ng-content in Angular to project content into child components.</p>
+    <p>Learn how to use <strong>ng-content</strong> in Angular to project content into child components.</p>
 </header>
 
-<!--Useful when you want to write markup in your child component from your parent component-->
-<!-- You can use it with select to place content into seperate ng-contents within the child-->
-<app-ng-content-example-child>
-    <div>ng-content: {{article?.title}}</div>
-    <h3 another-title>ng-content: {{article?.title}}</h3>
-</app-ng-content-example-child>
-<br />
-<app-ng-content-example-child>
-    <div>ng-content: {{article?.title}}</div>
-    <h3 another-title>ng-content: {{article?.title}}</h3>
-</app-ng-content-example-child>
-<br /><br />
-<hr>
+<section>
+    <h4>Example of projection with ng-content without using select</h4>
+    <!--Useful when you want to write markup in your child component from your parent component-->
+    <app-ng-content-example-child>
+        <div>ng-content: {{article?.title}}</div>
+        <h3>ng-content: {{article?.title}}</h3>
+    </app-ng-content-example-child>
+</section>
+
+<section>
+    <!-- You can use it with select to place content into seperate ng-contents within the child-->
+    <h4>Example of projection with ng-content with using select</h4>
+    <app-ng-content-example-child>
+        <div>ng-content: With Select</div>
+        <h3 another-title>ng-content: With Select</h3>
+    </app-ng-content-example-child>
+</section>

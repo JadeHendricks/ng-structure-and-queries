@@ -1,21 +1,45 @@
 <header>
     <h4>Angular | Angular ngTemplateOutlet</h4>
-    <p>Learn how to use ngTemplateOutlet in Angular</p>
+    <p>Learn how to use <strong>ngTemplateOutlet</strong> in Angular</p>
 </header>
 
-<ng-template #loadingTemplate>
-    <div>Loading...</div>
-</ng-template>
+<section>
+    <h4>ng-templateOutlet without context variables</h4>
 
-<!--using let-article="article" is how we pass properties to the template-->
-<ng-template #articleTemplate let-article="article">
-    <div>{{article?.title}}</div>
-</ng-template>
+    <!--Basic Template rendering with an outlet-->
+    <ng-template #loadingTemplate>
+        <div>Loading...</div>
+    </ng-template>
 
-<ng-container *ngTemplateOutlet="loadingTemplate"></ng-container>
-<ng-container
-  *ngTemplateOutlet="articleTemplate; context: { article: article }">
-</ng-container>
+    <ng-template #contentTemplate>
+        <div>Content...</div>
+    </ng-template>
 
-<br /><br />
-<hr>
+    <ng-container *ngTemplateOutlet="loadingTemplate"></ng-container>
+</section>
+
+<section>
+    <h4>ng-templateOutlet with context variables</h4>
+
+    <!--Using ngTemplateOutlet with context-->
+    <ng-template #myTemplate let-greeting let-message="message">
+        <p>{{greeting}} {{message}}</p>
+    </ng-template>
+    <ng-template #myTemplateWithoutImplicit let-greeting="greeting" let-message="message">
+        <p>{{greeting}} {{message}}</p>
+    </ng-template>
+
+
+    <!-- 
+    Here we are using the `ngTemplateOutlet` directive to render a template with context variables. The `let-greeting` is a local variable, and `let-message="message"` is a context variable that we can pass when we use the template.
+    The local variable is bound to the implicit context, while the context variable is bound to a named context.
+    implicit is always the first variable in the context object. (it is a default, but you can rename it if you want) 
+    -->
+
+    <ng-container *ngTemplateOutlet="myTemplate; context: {$implicit: 'Hi', message: 'Josh'}"></ng-container>
+    <ng-container *ngTemplateOutlet="myTemplate; context: {$implicit: 'Hello', message: 'there'}"></ng-container>
+    <ng-container *ngTemplateOutlet="myTemplate; context: {$implicit: 'Hey', message: 'consider subscribing?'}"></ng-container>
+
+    <!--Here we are using lacal variables without the implicit context-->
+    <ng-container *ngTemplateOutlet="myTemplateWithoutImplicit; context: {greeting: 'Hey', message: 'we are not implicit'}"></ng-container>
+</section>

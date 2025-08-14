@@ -1,29 +1,30 @@
 <header>
     <h4>Angular | Angular ng-template</h4>
-    <p>Learn how to use ng-template in Angular</p>
+    <p>Learn how to use <strong>ng-template</strong> in Angular</p>
 </header>
 
-<!--How to write it --> 
-<div class="article" *ngIf="article; else loading">{{article.title}}</div>
+<section>
+    <h4>Basic ng-template with template names</h4>
+    <!--How to write it --> 
+    <div class="article" *ngIf="article; else loading">{{article.title}}</div>
 
-<!-- 
-You will never use ng-template on it's own, it is always used with a directive
-ng-for, ng-if, ng-switch 
--->
-<ng-template #loading>
-    <div>Loading...</div>
-</ng-template>
+    <!-- 
+    You will never use ng-template on it's own, it is always used with a directive
+    ng-for, ng-if, ng-switch 
+    -->
+    <ng-template #loading>
+        <div>Loading...</div>
+    </ng-template>
 
-<!--How it works behind the scenes -->
-<!-- before --> 
-<!-- <div class="article" *ngIf="article; else loading">{{article.title}}</div> --> 
-<!-- after -->
-<!-- 
-<ng-template [ngIf]="article" [ngIfElse]="loading">
-    <div class="article">
-        {{article.title}}
-    </div>
-</ng-template> 
--->
-<br /><br />
-<hr>
+    <!--How it works behind the scenes -->
+    <!-- before --> 
+    <!-- <div class="article" *ngIf="article; else loading">{{article.title}}</div> --> 
+    <!-- after -->
+    <!-- 
+    <ng-template [ngIf]="article" [ngIfElse]="loading">
+        <div class="article">
+            {{article.title}}
+        </div>
+    </ng-template> 
+    -->
+</section>

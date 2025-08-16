@@ -43,4 +43,10 @@ export const routes: Routes = [
             import('./components/signal-based-queries/signal-viewchild-example/signal-viewchild-example.component')
             .then(m => m.SignalViewchildExampleComponent)
     },
+    {
+        path: 'signal-viewchildren',
+        loadComponent: () => 
+            import('./components/signal-based-queries/signal-viewchildren-example/signal-viewchildren-example.component')
+            .then(m => m.SignalViewchildrenExampleComponent)
+    },
 ];

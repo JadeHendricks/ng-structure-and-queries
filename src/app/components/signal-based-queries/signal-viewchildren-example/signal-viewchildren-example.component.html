@@ -1,0 +1,34 @@
+<header>
+    <h4>Angular | Signal Based ViewChildren</h4>
+    <p>Learn how to use <strong>viewChildren</strong> in Angular</p>
+    <p>Unlike the old <strong>ViewChildren</strong>, you don’t need lifecycle hooks to know when it’s ready — the signal always reflects the current value.</p>
+</header>
+
+<section>
+    <h4>Focus first empty input</h4>
+    <p>This all being done in the parent component, to show the use for element selection with viewChildren().</p>
+    <p>Loop over all the array and select the first input that does not have a value.</p>
+    <div class="section-wrapper">
+        <input #field type="text" placeholder="First name" />
+        <input #field type="text" placeholder="Last name" />
+        <input #field type="email" placeholder="Email" />
+    </div>
+    <button (click)="focusFirstEmpty()">Focus first empty</button>
+</section>
+
+<section>
+    <h4>Change Child Box Colors from Parent</h4>
+    <p>Here we are using viewChildren to programatically change the color of a component.</p>
+    <p>Children expose a small public API (setColor) instead of leaking DOM logic.</p>
+    <div class="section-wrapper">
+        <app-signal-viewchildren-child-example></app-signal-viewchildren-child-example>
+        <app-signal-viewchildren-child-example></app-signal-viewchildren-child-example>
+        <app-signal-viewchildren-child-example></app-signal-viewchildren-child-example>
+        <div style="margin-top: 1rem;">
+            <button (click)="setAll('lightblue')">Blue</button>
+            <button (click)="setAll('lightgreen')">Green</button>
+            <button (click)="setAll('pink')">Pink</button>
+            <button (click)="reset()">Reset</button>
+        </div>
+    </div>
+</section>

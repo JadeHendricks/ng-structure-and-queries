@@ -37,4 +37,10 @@ export const routes: Routes = [
             import('./components/structural/ng-templateoutlet-example/ng-templateoutlet-example.component')
             .then(m => m.NgTemplateoutletExampleComponent)
     },
+    {
+        path: 'signal-viewchild',
+        loadComponent: () => 
+            import('./components/signal-based-queries/signal-viewchild-example/signal-viewchild-example.component')
+            .then(m => m.SignalViewchildExampleComponent)
+    },
 ];
